@@ -67,7 +67,7 @@ A comprehensive web-based pet health management system built with PHP, MySQL, an
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/Hodhan7/2-pet.git
 cd pet-health-tracker
 ```
 
