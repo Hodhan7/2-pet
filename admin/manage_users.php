@@ -156,7 +156,7 @@ $users_result = $conn->query($users_query);
                         <a href="admin_dashboard.php" class="text-blue-600 hover:text-blue-800">
                             ← Back to Dashboard
                         </a>
-                        <span class="text-gray-500">Welcome, <?php echo htmlspecialchars($_SESSION['first_name']); ?></span>
+                        <span class="text-gray-500">Welcome, <?php echo htmlspecialchars($_SESSION['first_name'] ?? 'User'); ?>
                         <a href="logout.php" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">
                             Logout
                         </a>
