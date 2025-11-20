@@ -73,9 +73,7 @@ $user_name = $_SESSION['user_name'] ?? 'User';
                     <a href="<?php echo path('admin/admin_dashboard.php'); ?>" class="nav-link <?php echo $current_page === 'admin_dashboard.php' ? 'text-blue-600 font-semibold' : 'text-gray-600 hover:text-blue-600'; ?> transition-colors duration-200">
                             Dashboard
                         </a>
-                    <a href="<?php echo path('admin/manage_vet_application.php'); ?>" class="nav-link <?php echo $current_page === 'manage_vet_application.php' ? 'text-blue-600 font-semibold' : 'text-gray-600 hover:text-blue-600'; ?> transition-colors duration-200">
-                            Vet Applications
-                        </a>
+                    
                         <a href="<?php echo path('manage_appointments.php'); ?>" class="nav-link <?php echo $current_page === 'manage_appointments.php' ? 'text-blue-600 font-semibold' : 'text-gray-600 hover:text-blue-600'; ?> transition-colors duration-200">
                             Appointments
                         </a>
@@ -173,7 +171,7 @@ $user_name = $_SESSION['user_name'] ?? 'User';
                         <a href="<?php echo path('patients.php'); ?>" class="block py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200">Patients</a>
                     <?php elseif ($user_role === 'admin'): ?>
                         <a href="<?php echo path('admin/admin_dashboard.php'); ?>" class="block py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200">Dashboard</a>
-                        <a href="<?php echo path('admin/manage_vet_application.php'); ?>" class="block py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200">Vet Applications</a>
+    
                         <a href="<?php echo path('manage_appointments.php'); ?>" class="block py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200">Appointments</a>
                         <a href="<?php echo path('admin/manage_users.php'); ?>" class="block py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200">Manage Users</a>
                     <?php endif; ?>
