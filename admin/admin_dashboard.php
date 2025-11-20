@@ -180,17 +180,7 @@ $appointment_stats = $conn->query("
                     </div>
                 </a>
 
-                <a href="manage_vet_application.php" class="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors duration-200">
-                    <div class="p-2 bg-purple-100 rounded-lg mr-3">
-                        <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="font-medium text-gray-900">Vet Applications</h3>
-                        <p class="text-sm text-gray-500">Review vet applications</p>
-                    </div>
-                </a>
+                
             </div>
         </div>
 
