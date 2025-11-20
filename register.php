@@ -37,14 +37,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $check->close();
 
             // Combine first and last name
-            $name = trim($first_name . ' ' . $last_name);
-            $password = password_hash($password_raw, PASSWORD_DEFAULT);
+$name = trim($first_name . ' ' . $last_name);
+$password = password_hash($password_raw, PASSWORD_DEFAULT);
 
-            $stmt = $conn->prepare("INSERT INTO users (email, password, role, name, first_name, last_name, phone) VALUES (?, ?, ?, ?, ?, ?, ?)");
+// Set license_number based on role
+$license_number = ($role === 'veterinarian') ? 'PENDING' : NULL;
+
+$stmt = $conn->prepare("INSERT INTO users (email, password, role, name, first_name, last_name, phone, license_number) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
             if (!$stmt) {
                 $error_message = 'Database error: ' . $conn->error;
             } else {
-                $stmt->bind_param("sssssss", $email, $password, $role, $name, $first_name, $last_name, $phone);
+                $stmt->bind_param("ssssssss", $email, $password, $role, $name, $first_name, $last_name, $phone, $license_number);
                 if ($stmt->execute()) {
                     if ($role === 'veterinarian') {
                         $user_id = $conn->insert_id;
